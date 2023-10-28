@@ -6,6 +6,7 @@
 
 # 등장 빈도 기준 정제 함수 정의 
 def clean_by_freq(tokenized_words, freq):
+    from collections import Counter
     # 1. Counter 함수를 통해 단어의 빈도수를 카운트하여 단어 집합 생성
     # vocab 이라는 변수에 담기
     vocab = Counter(tokenized_words)
@@ -26,7 +27,7 @@ def clean_by_freq(tokenized_words, freq):
         if word not in low_freq_words:
             cleaned_words.append(word)
     
-    return cleaned_words0
+    return cleaned_words
 
 # 단어 길이 기준 정제 함수 
 def clean_by_len(tokenized_words, length):
